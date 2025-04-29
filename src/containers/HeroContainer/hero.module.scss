@@ -9,8 +9,8 @@
     justify-content: center;
     overflow: hidden;
     color: #fff;
-    @media (max-width:768px) {
-        height: 85vh;
+    @media (max-width:767px) {
+        height: 90vh;
     }
 
     .videoBackground {
@@ -41,6 +41,10 @@
             flex-direction: column;
         }
 
+        @media (max-width:767px) {
+            margin-top: 40px;
+        }
+
         >div{
             width: 50%;
 
@@ -61,7 +65,7 @@
             }
             
             @media (max-width:767px) {
-                font-size: 40px;
+                font-size: 35px;
                 line-height: 40px;
                 margin-bottom: 20px;
             }
@@ -81,9 +85,9 @@
                 line-height: 30px;
             }
             
-            @media (max-width:768px) {
-                font-size: 17px;
-                line-height: 28px;
+            @media (max-width:767px) {
+                font-size: 14px;
+                line-height: 24px;
             }
 
             span{
@@ -112,9 +116,37 @@
                 padding: 10px 20px;
             }
 
-            @media (max-width:768px) {
-                font-size: 16px;
-                padding: 7px 15px;
+            @media (max-width:767px) {
+                display: none;
+            }
+        }
+
+        .mblBtn{
+            display: none;
+
+            @media (max-width:767px) {
+                display: block;
+                background-color: $primary_blue_color;
+                color: #fff;
+                font-size: 14px;
+                font-weight: 500;
+                padding: 5px 20px;
+                border: 3px solid $primary_blue_color;
+                border-radius: 40px;
+                transition: 0.3s ease;
+                cursor: pointer;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+                span{
+                    margin-top: 2px;
+                }
+    
+                &:hover{
+                    background-color: #fff;
+                    color: $primary_blue_color;
+                }
             }
         }
     }

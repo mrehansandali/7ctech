@@ -17,6 +17,7 @@ const Hero = (props: Props) => {
           <div>
             <h1>We are <span>Experts </span> <br /> in <span> Software <br /> </span> <span>Creation.</span></h1>
             <button className={styles.btn}>Let's Talk Your Vision <span><FaLocationArrow /></span></button>
+            <button className={styles.mblBtn}>Let's Talk <span><FaLocationArrow /></span></button>
           </div>
           <div>
             <p>We don't just build software—we build <span>relationships</span> rooted in trust, transparency, and results. As your development partner, our singular focus is to help you create digital products that make a real difference. From strategy to execution, we're here to deliver outcomes that last—products that perform, engage, and drive your business forward.</p>
@@ -24,6 +25,7 @@ const Hero = (props: Props) => {
         </div>
     </section>
 
+        <div className="extra"></div>
     </>
   )
 }
