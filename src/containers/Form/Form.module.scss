@@ -1,0 +1,132 @@
+@use '@/styles/variables' as *;
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 80px 25px 15px 25px;
+    height: 100vh;
+    background-color: $primary_black_color;
+    
+    @media (max-width: 767px) {
+        padding: 50px 25px 15px 25px;
+    }
+
+    .closeBtnContainer{
+        height: 35px;
+        width: 35px;
+        z-index: 2;
+        position: absolute;
+        top: 17px;
+        right: 16px;
+        color: $primary_black_color;
+        margin: auto;
+        font-size: 27px;
+        border-radius: 50%;
+        background-color: $primary_white_color;
+        cursor: pointer;
+    
+        svg{
+            margin: 4px 0 0 4px;
+        }
+    }
+
+    .container_child{
+
+        .heading{
+            color: $primary_white_color;
+            font-size: 48px;
+            line-height: 55px;
+            margin-bottom: 30px;
+            
+            @media(max-width:767px){
+                font-size: 45px;
+            }
+            
+            span{
+                color: $primary_blue_color;
+            }
+        }
+        
+        p{
+            color: $primary_white_color;
+            margin-bottom: 30px;
+        }
+        
+        .lastPara{
+            margin-top: 30px;
+            color: $primary_white_color;
+            font-size: 13px;
+
+            a{
+                color: $primary_blue_color;
+                text-decoration: none;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .form{
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+
+        .inputDiv{
+            width: 100%;
+            
+            input{
+                width: 100%;
+                outline: none;
+                border: none;
+                padding: 13px 20px;
+                border-radius: 20px;
+                background-color: #262a2d;
+                color: $primary_white_color;
+                font-size: 16px;
+                
+                &::placeholder{
+                    color: $primary_white_color;
+                }
+            }
+        }
+
+        .halInputDiv{
+            width: calc(50% - 8px);
+            
+            input{
+                width: 100%;
+                outline: none;
+                border: none;
+                padding: 13px 20px;
+                border-radius: 20px;
+                background-color: #262a2d;
+                color: $primary_white_color;
+                font-size: 16px;
+                
+                &::placeholder{
+                    color: $primary_white_color;
+                }
+            }
+        }
+
+        .submitBtn{
+            width: 100%;
+            outline: none;
+            border: none;
+            padding: 13px 20px;
+            border-radius: 20px;
+            background-color: $primary_blue_color;
+            color: $primary_white_color;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+}
+
+.discussYourIdeaBox{
+    max-width: 450px;
+    width: 100vw;
+}

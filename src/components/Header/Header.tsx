@@ -12,12 +12,18 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import dynamic from 'next/dynamic';
 const MediaQuery = dynamic(()=> import('react-responsive'), { ssr: false });
+import Form from '@/containers/Form/Form';
 
 type Props = {}
 
 const Header = (props: Props) => {
 
   const [isOpenMblDrawer, setIsOpenMblDrawer] = React.useState(false);
+  const [formDrawer, setFormDrawer] = React.useState(false);
+  
+  const togglediscussYourIdeaDrawer = () => {
+    setFormDrawer(!formDrawer);
+  };
 
   const toggleMblDrawer = () => {
     setIsOpenMblDrawer(!isOpenMblDrawer);
@@ -28,7 +34,8 @@ const Header = (props: Props) => {
     <header>
       <div className={styles.stickyHeader}>
         <div className={styles.container}>
-          <div className={styles.logo}><span>7c</span>tech<span>.</span></div>
+          {/* <div className={styles.logo}><span>7c</span>tech<span>.</span></div> */}
+          <div className={styles.logo}><span>T</span>esting<span>.</span></div>
 
           <div className={styles.navAndContact}>
             <MediaQuery minWidth={1024}>
@@ -63,7 +70,7 @@ const Header = (props: Props) => {
                 <p><span><IoMdCall /></span> (323) 201-7046</p>
               </MediaQuery>
 
-              <button>Get in Touch</button>
+              <button onClick={togglediscussYourIdeaDrawer}>Get in Touch</button>
 
               <MediaQuery maxWidth={1023}>
                 <div className={styles.hamBurger} onClick={toggleMblDrawer}><HiOutlineMenuAlt3 /></div>
@@ -113,6 +120,8 @@ const Header = (props: Props) => {
         </ul>
       </div>
     </Drawer>
+
+    <Form open={formDrawer} toggle={togglediscussYourIdeaDrawer} />
     </>
   )
 }

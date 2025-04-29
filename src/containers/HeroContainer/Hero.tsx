@@ -1,10 +1,19 @@
+'use client'
 import React from 'react';
 import styles from "./hero.module.scss"
-import { FaLocationArrow } from 'react-icons/fa';
+import { MdArrowOutward } from "react-icons/md";
+import Form from '../Form/Form';
 
 type Props = {}
 
 const Hero = (props: Props) => {
+
+  const [formDrawer, setFormDrawer] = React.useState(false)
+
+  const togglediscussYourIdeaDrawer = () => {
+    setFormDrawer(!formDrawer);
+  };
+    
   return (
     <>
     
@@ -16,8 +25,8 @@ const Hero = (props: Props) => {
         <div className={styles.content}>
           <div>
             <h1>We are <span>Experts </span> <br /> in <span> Software <br /> </span> <span>Creation.</span></h1>
-            <button className={styles.btn}>Let's Talk Your Vision <span><FaLocationArrow /></span></button>
-            <button className={styles.mblBtn}>Let's Talk <span><FaLocationArrow /></span></button>
+            <button onClick={togglediscussYourIdeaDrawer} className={styles.btn}>Let's Talk Your Vision <span><MdArrowOutward /></span></button>
+            <button onClick={togglediscussYourIdeaDrawer} className={styles.mblBtn}>Let's Talk <span><MdArrowOutward /></span></button>
           </div>
           <div>
             <p>We don't just build software—we build <span>relationships</span> rooted in trust, transparency, and results. As your development partner, our singular focus is to help you create digital products that make a real difference. From strategy to execution, we're here to deliver outcomes that last—products that perform, engage, and drive your business forward.</p>
@@ -26,6 +35,7 @@ const Hero = (props: Props) => {
     </section>
 
         <div className="extra"></div>
+        <Form open={formDrawer} toggle={togglediscussYourIdeaDrawer} />
     </>
   )
 }
