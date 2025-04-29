@@ -1,0 +1,29 @@
+@use '@/styles/variables' as *;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+main{
+    background-color: rgba(0, 0, 0, 0.684);
+    min-height: 70vh;
+}
+
+
+///// mbl drawer container //////
+
+.drawerContainer{
+    background-color: $primary_black_color;
+    
+    .MuiBackdrop-root{
+        background-color: $primary_black_color;
+    }
+    
+    .MuiPaper-root{
+        width: 100%;
+        background-color: $primary_black_color;
+    }
+}

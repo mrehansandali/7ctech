@@ -1,0 +1,134 @@
+@use '@/styles/variables' as *;
+
+.hero {
+    position: relative;
+    height: calc(100vh - 82px);
+    max-height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+    @media (max-width:768px) {
+        height: 85vh;
+    }
+
+    .videoBackground {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        max-width: 1440px;
+        width: 100%;
+        height: 100%;
+        padding: 10px 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+
+        @media (max-width:1024px) {
+            flex-direction: column;
+        }
+
+        >div{
+            width: 50%;
+
+            @media (max-width:1024px) {
+                width: 100%;
+            }
+        }
+
+        h1 {
+            font-size: 5rem;
+            letter-spacing: -1px;
+            line-height: 70px;
+            margin-bottom: 35px;
+
+            @media (max-width:1200px) {
+                font-size: 55px;
+                line-height: 55px;
+            }
+            
+            @media (max-width:767px) {
+                font-size: 40px;
+                line-height: 40px;
+                margin-bottom: 20px;
+            }
+
+            span{
+                color: $primary_blue_color;
+            }
+        }
+
+        p {
+            font-size: 24px;
+            font-weight: 100;
+            color: #fff;
+
+            @media (max-width:1200px) {
+                font-size: 21px;
+                line-height: 30px;
+            }
+            
+            @media (max-width:768px) {
+                font-size: 17px;
+                line-height: 28px;
+            }
+
+            span{
+                color: $primary_blue_color;
+            }
+        }
+
+        .btn{
+            background-color: $primary_blue_color;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 15px 30px;
+            border: 3px solid $primary_blue_color;
+            border-radius: 40px;
+            transition: 0.3s ease;
+            cursor: pointer;
+
+            &:hover{
+                background-color: #fff;
+                color: $primary_blue_color;
+            }
+
+            @media (max-width: 1023px) {
+                font-size: 18px;
+                padding: 10px 20px;
+            }
+
+            @media (max-width:768px) {
+                font-size: 16px;
+                padding: 7px 15px;
+            }
+        }
+    }
+}
+
+
+    
+.hero::before{
+    background-color: rgba(0, 0, 0, 0.612);
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
