@@ -1,0 +1,181 @@
+@use '@/styles/variables' as *;
+
+.container{
+    background-color: $primary_black_color;
+    color: $primary_white_color;
+    position: relative;
+    min-height: 80vh;
+    overflow: hidden;
+
+    @media (max-width: 767px) {
+        min-height: 100vh;
+    }
+
+    .content{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 40px;
+        max-width: 1280px;
+        width: 100%;
+        margin: auto;
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 15px 25px;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
+
+        .itemOne{
+            width: 50%;
+            margin-top: 70px;
+
+            @media (max-width: 767px) {
+                width: 100%;
+                margin-top: 0;
+            }
+
+            h2{
+                font-size: 30px;
+                line-height: 30px;
+                max-width: 400px;
+                margin-bottom: 20px;
+            }
+
+            p{
+                font-size: 16px;
+                max-width: 400px;
+            }
+        }
+
+        .itemTwo{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            @media (max-width: 767px) {
+                width: 100%;
+            }
+
+            .projects{
+                
+                h3{
+                    font-size: 90px;
+                    line-height: 90px;
+                    background: linear-gradient(to left, #ffffff98 75%, #2dc9fd);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-weight: lighter;
+                    letter-spacing: -3px;
+                }
+
+                p{
+                    font-size: 22px;
+                    color: #b5b2b2;
+                }
+            }
+
+            .teamMem{
+                margin-left: 45px;
+                
+                h3{
+                    font-size: 90px;
+                    line-height: 90px;
+                    background: linear-gradient(to left, #19daf02c 75%, #d98bd9);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-weight: lighter;
+                    letter-spacing: -3px;
+                }
+
+                p{
+                    font-size: 22px;
+                    color: #b5b2b2;
+                }
+            }
+
+            .client{
+                margin-left: 90px;
+                
+                h3{
+                    font-size: 90px;
+                    line-height: 90px;
+                    background: linear-gradient(to left, #597b7574 75%, #7be7a4,);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-weight: lighter;
+                    letter-spacing: -3px;
+                }
+
+                p{
+                    font-size: 22px;
+                    color: #b5b2b2;
+                }
+            }
+        }
+    }
+
+    .bgLinearGradient{
+        height: 500px;
+        width: 500px;
+        background: #448df415;
+        box-shadow: 0px 0px 45px 66px #448df415;
+        position: absolute;
+        border-radius: 50%;
+        animation: moving 100s infinite linear;
+        z-index: 1;
+
+        @keyframes moving {
+            0% {
+                top: 0%;
+                left: 0%;
+                border-radius: 10% 30% 50% 70%;
+            }
+
+            20% {
+                top: 30%;
+                left: 30%;
+                border-radius: 10% / 50%;
+            }
+
+            40% {
+                top: 60%;
+                left: 60%;
+                border-radius: 50% 20% / 10% 40%;
+            }
+
+            50% {
+                top: 80%;
+                left: 80%;
+                border-radius: 50% 20% / 10% 40%;
+            }
+
+            60% {
+                top: 60%;
+                left: 60%;
+                border-radius: 50% 20% / 10% 40%;
+            }
+
+            80% {
+                top: 30%;
+                left: 30%;
+                border-radius: 10% / 50%;
+            }
+
+            100% {
+                top: 0%;
+                left: 0%;
+                border-radius: 10% 30% 50% 70%;
+            }
+        }
+    }
+
+}
