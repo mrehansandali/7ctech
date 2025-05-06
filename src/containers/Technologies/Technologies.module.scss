@@ -1,0 +1,147 @@
+@use '@/styles/variables' as *;
+
+.section{
+    background-color: #fff;
+
+    .container{
+        max-width: 1280px;
+        width: 100%;
+        padding: 120px 25px;
+        margin: auto;
+        
+        @media (max-width: 767px) {
+            padding: 80px 15px;            
+        }
+    
+        .header{
+            max-width: 900px;
+    
+            h2{
+                font-size: 55px;
+                margin-bottom: 30px;
+
+                @media (max-width: 767px) {
+                    font-size: 30px;
+                    margin-bottom: 20px;
+                }
+            }
+    
+            p{
+                font-size: 22px;
+                margin-bottom: 80px;
+
+                @media (max-width: 767px) {
+                    font-size: 16px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    
+        .tabSection{
+            display: flex;
+            margin-top: 40px;
+
+            @media (max-width: 767px) {
+                flex-direction: column;           
+            }
+    
+            .tabs{
+                width: 20%;
+                min-width: 200px;
+                padding: 20px 0;
+                border-top: 1px solid rgb(222, 219, 219);
+                border-right: 1px solid rgb(222, 219, 219);
+
+                @media (max-width: 767px) {
+                    width: 100%;   
+                    padding: 10px 0 0 0;
+                    border: none;
+                }
+    
+                ul{
+
+                    @media (max-width: 767px) {
+                        display: flex;
+                        overflow-x: scroll;
+
+                        &::-webkit-scrollbar {
+                            width: 2px;
+                        }
+                    }
+                    
+                    li{
+                        list-style-type: none;
+                        padding: 10px 20px;
+                        border-radius: 20px;
+                        font-size: 24px;
+                        cursor: pointer;
+
+                        @media (max-width: 767px) {
+                            font-size: 18px;
+                            padding: 10px 0;
+                            margin-right: 30px;
+                        }
+                    }
+                    
+                    .active{
+                        background: linear-gradient(to right, #7fcef3, #fff 60%);
+
+                        @media (max-width: 767px) {
+                            background: transparent;
+                            border-bottom: 2px solid $primary_blue_color;
+                            border-radius: 0;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+    
+            .tabContent{
+                width: 70%;
+                padding: 20px;
+                border-top: 1px solid rgb(222, 219, 219);
+
+                @media (max-width: 767px) {
+                    width: 100%;
+                    padding: 20px 0;            
+                }
+    
+                .content{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 15px;
+    
+                    >div{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 20px;
+                        padding: 10px 15px;
+                        width: 215px;
+                        font-size: 20px;
+                        background-color: #f3f4f6;
+                        border-radius: 30px;
+
+                        @media (max-width: 767px) {
+                            font-size: 14px;  
+                            gap: 10px;
+                            width: 155px;
+                        }
+                        
+                        svg{
+                            font-size: 28px;
+
+                            @media (max-width: 767px) {
+                                font-size: 20px;            
+                            }
+                        }
+
+                        p{
+                            font-weight: 100 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
