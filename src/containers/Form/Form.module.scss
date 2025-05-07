@@ -51,6 +51,11 @@
         p{
             color: $primary_white_color;
             margin-bottom: 30px;
+
+            @media (max-width: 767px) {
+                margin-bottom: 20px;
+                font-size: 14px;
+            }
         }
         
         .lastPara{
@@ -95,6 +100,10 @@
 
         .halInputDiv{
             width: calc(50% - 8px);
+
+            @media (max-width: 767px) {
+                width: 100%;
+            }
             
             input{
                 width: 100%;

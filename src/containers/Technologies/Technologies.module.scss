@@ -1,7 +1,7 @@
 @use '@/styles/variables' as *;
 
 .section{
-    background-color: #fff;
+    background-color: $primary_white_color;
 
     .container{
         max-width: 1280px;
@@ -84,7 +84,7 @@
                     }
                     
                     .active{
-                        background: linear-gradient(to right, #7fcef3, #fff 60%);
+                        background: linear-gradient(to right, #7fcef3, $primary_white_color 60%);
 
                         @media (max-width: 767px) {
                             background: transparent;

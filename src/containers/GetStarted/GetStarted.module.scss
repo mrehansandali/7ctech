@@ -1,0 +1,65 @@
+@use '@/styles/variables' as *;
+
+.section{
+    background-color: $primary_white_color;
+
+    .container{
+        max-width: 1280px;
+        width: 100%;
+        padding: 120px 25px;
+        margin: auto;
+
+        @media (max-width: 767px) {
+            padding: 80px 15px;            
+        }
+
+        h3{
+            font-size: 65px;
+            line-height: 75px;  
+            text-align: center;
+            max-width: 500px;
+            margin: auto;
+
+            @media (max-width: 767px) {
+                max-width: 300px;
+                font-size: 35px;  
+                line-height: 40px;  
+            }
+        }
+
+        button{
+            background-color: $primary_blue_color;
+            border: 3px solid $primary_blue_color;
+            color: $primary_white_color;
+            font-size: 20px;
+            padding: 10px 35px;
+            border-radius: 40px;
+            transition: 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px auto 0 auto;
+
+            svg{
+                transition: 0.3s ease;
+            }
+            
+            &:hover{
+                background-color: $primary_white_color;
+                color: $primary_blue_color;
+                
+                svg{
+                    transform: translateX(7px);
+                }
+            }
+
+            @media (max-width:767px) {
+                font-size: 16px;
+                padding: 7px 30px;
+                margin: 20px auto 0 auto;
+            }
+        }
+    }
+}
