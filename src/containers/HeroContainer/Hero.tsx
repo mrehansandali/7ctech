@@ -25,7 +25,6 @@ const Hero = (props: Props) => {
               <source src="https://videos.ctfassets.net/mi665aivb0at/xRSpukKuiLPVNxfEnAsTp/a6a1c03c9cb07431e91ec93e10886b63/Cubix_Home_Hero_Video.webm" />
               Your browser does not support the video tag.
           </video> */}
-
           <MediaQuery minWidth={550}>
             <div className={styles.imgBackground}>
               <img src="https://images.unsplash.com/photo-1678203699263-917199c725b2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVybyUyMGltYWdlfGVufDB8fDB8fHww" alt="" />
