@@ -34,8 +34,7 @@ const Header = (props: Props) => {
     <header>
       <div className={styles.stickyHeader}>
         <div className={styles.container}>
-          {/* <div className={styles.logo}><span>7c</span>tech<span>.</span></div> */}
-          <div className={styles.logo}><span>T</span>esting<span>.</span></div>
+          <div className={styles.logo}><span>7c</span>tech<span>.</span></div>
 
           <div className={styles.navAndContact}>
             <MediaQuery minWidth={1024}>
