@@ -19,6 +19,7 @@ const Hero = (props: Props) => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
+      offset: 20,
     });
   }, []);
 
@@ -49,7 +50,7 @@ const Hero = (props: Props) => {
               <button onClick={togglediscussYourIdeaDrawer} className={styles.btn}>Let's Talk Your Vision <span><MdArrowOutward /></span></button>
               <button onClick={togglediscussYourIdeaDrawer} className={styles.mblBtn}>Let's Talk <span><MdArrowOutward /></span></button>
             </div>
-            <div data-aos="fade-left">
+            <div data-aos="fade-right">
               <p>We don't just build software—we build <span>relationships</span> rooted in trust, transparency, and results. As your development partner, our singular focus is to help you create digital products that make a real difference. From strategy to execution, we're here to deliver outcomes that last—products that perform, engage, and drive your business forward.</p>
             </div>
           </div>
