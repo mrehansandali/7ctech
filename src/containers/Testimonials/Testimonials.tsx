@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { FaLongArrowAltRight, FaLongArrowAltLeft,FaQuoteLeft } from "react-icons/fa";
+import IconsSlider from '../IconsSlider/IconsSlider';
 
 
 type Props = {}
@@ -43,17 +44,85 @@ const Testimonials = (props: Props) => {
         "message": "7CTECH exceeded our expectations. Their frontend and backend teams worked seamlessly, delivering a polished product on time. Communication was constant, and they handled last-minute changes without issues. Definitely one of the best tech partners we've worked with globally."
         }
     ]
+
+    const servicesText = [
+        'Web Development',
+        'Android',
+        'App Development',
+        'IOS',
+        'E-Commerce Solutions',
+        'Blockchain',
+        'Custom Development',
+        'SAAS',
+        'Web Design',
+        'Branding',
+
+        'Web Development',
+        'Android',
+        'App Development',
+        'IOS',
+        'E-Commerce Solutions',
+        'Blockchain',
+        'Custom Development',
+        'SAAS',
+        'Web Design',
+        'Branding',
+
+        'Web Development',
+        'Android',
+        'App Development',
+        'IOS',
+        'E-Commerce Solutions',
+        'Blockchain',
+        'Custom Development',
+        'SAAS',
+        'Web Design',
+        'Branding',
+
+        'Web Development',
+        'Android',
+        'App Development',
+        'IOS',
+        'E-Commerce Solutions',
+        'Blockchain',
+        'Custom Development',
+        'SAAS',
+        'Web Design',
+        'Branding',
+
+        'Web Development',
+        'Android',
+        'App Development',
+        'IOS',
+        'E-Commerce Solutions',
+        'Blockchain',
+        'Custom Development',
+        'SAAS',
+        'Web Design',
+        'Branding',
+
+        'Web Development',
+        'Android',
+        'App Development',
+        'IOS',
+        'E-Commerce Solutions',
+        'Blockchain',
+        'Custom Development',
+        'SAAS',
+        'Web Design',
+        'Branding'
+    ]
       
     return (
         <>
             <section>
                 <div className={styles.container}>
                     <div className={styles.content}>
-                        <div className={styles.itemOne}>
+                        <div className={styles.itemOne} data-aos="fade-right">
                             <h2>Our Clients Love The Results.</h2>
                             <p>Trusted by industry leaders, we deliver innovation backed by real results and firsthand experience.</p>
                         </div>
-                        <div className={styles.itemTwo}>
+                        <div className={styles.itemTwo} data-aos="fade-right" data-aos-offset='10'>
                             <Swiper
                                 className={`mySwiper ${styles.swiper}`}
                                 loop={true}
@@ -95,7 +164,8 @@ const Testimonials = (props: Props) => {
                     </div>
                     <div className={styles.bgLinearGradient}></div>
                 </div>
-            </section>    
+            </section>
+            <IconsSlider data={servicesText} type={'text'} />
         </>
     )
 }

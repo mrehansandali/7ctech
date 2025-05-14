@@ -18,12 +18,12 @@ const Technologies = (props: Props) => {
 
       <section className={styles.section}>
         <div className={styles.container}>
-          <div className={styles.header}>
+          <div className={styles.header} data-aos="fade-right">
             <h2>Technologies we use</h2>
             <p>Our pool of 350+ technology specialists—across web, mobile, and software development—brings the expertise and scalability your projects demand, backed by the latest tools and frameworks.</p>
           </div>
           <div className={styles.tabSection}>
-            <div className={styles.tabs}>
+            <div className={styles.tabs} data-aos="fade-right">
               <ul>
                 <li className={tabContent == 'frontend' ? styles.active : ""} onClick={() => setTabContent("frontend")}>Frontend</li>
                 <li className={tabContent == 'backend' ? styles.active : ""} onClick={() => setTabContent("backend")}>Backend</li>
@@ -32,7 +32,7 @@ const Technologies = (props: Props) => {
                 <li className={tabContent == 'cms' ? styles.active : ""} onClick={() => setTabContent("cms")}>CMS</li>
               </ul>
             </div>
-            <div className={styles.tabContent}>
+            <div className={styles.tabContent} data-aos="fade-left">
               {tabContent === 'frontend' ?
                 <div className={styles.content}>
                     <div><FaReact /><p>React.js</p></div>

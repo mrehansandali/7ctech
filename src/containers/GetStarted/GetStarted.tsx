@@ -18,7 +18,7 @@ const GetStarted = (props: Props) => {
             <section className={styles.section}>
                 <div className={styles.container}>
                     <p>Fire It Up!</p>
-                    <h3>Let's bring your vision to life</h3>
+                    <h3 data-aos="fade-up">Let's bring your vision to life</h3>
                     <button onClick={() => togglediscussYourIdeaDrawer()}>Get Started <FaArrowRightLong /></button>
                 </div>
             </section>

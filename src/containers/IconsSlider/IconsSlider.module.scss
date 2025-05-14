@@ -40,6 +40,14 @@
                 object-fit: cover;
             }
         }
+
+        .textContainer{
+            width: max-content;
+            text-align: center;
+            margin: auto;
+            font-size: 25px;
+            display: list-item;
+        }
     }
 
 }

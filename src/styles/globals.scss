@@ -7,6 +7,10 @@
     -webkit-font-smoothing: antialiased;
 }
 
+section{
+    overflow-x: hidden;
+}
+
 main{
     background-color: rgba(0, 0, 0, 0.684);
     min-height: 70vh;
